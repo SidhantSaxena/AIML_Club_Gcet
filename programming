@@ -1,1 +1,13 @@
-
+1.Write a program to print "hello world" without using a semicolon?
+#include<stdio.h> 
+void main(){      
+ if(printf("hello world")){} // It prints the ?hello world? on the screen.  
+}     
+----------------------------------------------------------------------------------
+2.Write a program to swap two numbers without using the third variable?\
+//logic
+a=a+b;//a=30 (10+20)       
+b=a-b;//b=10 (30-20)      
+a=a-b;//a=20 (30-10)      
+-----------------------------------------------------------------------------------
+3.
