@@ -60,7 +60,11 @@ Ans: The program will be compiled but will not be executed. To execute any C pro
 Ans: A Preprocessor Directive is considered as a built-in predefined function or macro that acts as a directive to the compiler and 
 it gets executed before the actual C Program is executed.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
-
+11. difference between call by value and call by reference in C ?
+ans: In Call by value, a copy of the variable is passed whereas in Call by reference, a variable itself is passed.
+     n Call by value, actual and formal arguments will be created in different memory locations whereas 
+     In Call by reference, actual and formal arguments will be created in the same memory location.
+     
 
 
 
