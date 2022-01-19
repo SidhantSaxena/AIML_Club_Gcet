@@ -1,1 +1,62 @@
+1. Reverse A given Number
+Ans. while (n != 0) {
+        remainder = n % 10;
+        rev = rev * 10 + remainder;
+        n /= 10;
+    }
+--------------------------------------------------------------------------------------------------------------------------------------------
+2. Find Number Is Armstrong Or Not
+Ans.while(n>0)    
+{    
+r=n%10;    
+sum=sum+(r*r*r);    
+n=n/10;    
+}    
+if(temp==sum)    
+printf("armstrong  number ");    
+else    
+printf("not armstrong number");    
+---------------------------------------------------------------------------------------------------------------------------------------------
+3. Calculate Sum of Natural Numbers
+Ans. for (i = 1; i <= n; ++i) {
+        sum += i;
+    }
+----------------------------------------------------------------------------------------------------------------------------------------------
+4. Display Fibonacci Series
+Ans.  printf("\n%d %d",n1,n2);//printing 0 and 1    
+ for(i=2;i<number;++i)//loop starts from 2 because 0 and 1 are already printed    
+ {    
+  n3=n1+n2;    
+  printf(" %d",n3);    
+  n1=n2;    
+  n2=n3;    
+ }  
+-----------------------------------------------------------------------------------------------------------------------------------------------
+5. What are the basic Datatypes supported in C Programming Language?
+Ans: The Datatypes in C Language are broadly classified into 4 categories. They are as follows:
 
+Basic Datatypes
+Derived Datatypes
+Enumerated Datatypes
+Void Datatypes
+------------------------------------------------------------------------------------------------------------------------------------------------
+6. What do you mean by Dangling Pointer Variable in C Programming?
+
+Ans: A Pointer in C Programming is used to point the memory location of an existing variable. 
+In case if that particular variable is deleted and the Pointer is still pointing to the same memory location,
+then that particular pointer variable is called as a Dangling Pointer Variable.
+--------------------------------------------------------------------------------------------------------------------------------------------------
+7. What are static variables and functions?
+Ans: The variables and functions that are declared using the keyword Static are considered as Static Variable and Static Functions.
+The variables declared using Static keyword will have their scope restricted to the function in which they are declared.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+8. What are the valid places where the programmer can apply Break Control Statement?
+Ans: Break Control statement is valid to be used inside a loop and Switch control statements.
+---------------------------------------------------------------------------------------------------------------------------------------------------
+9. Can a C program be compiled or executed in the absence of a main()?
+Ans: The program will be compiled but will not be executed. To execute any C program, main() is required.
+----------------------------------------------------------------------------------------------------------------------------------------------------
+10. What is Preprocessor?
+Ans: A Preprocessor Directive is considered as a built-in predefined function or macro that acts as a directive to the compiler and 
+it gets executed before the actual C Program is executed.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
