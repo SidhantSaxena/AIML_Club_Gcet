@@ -173,8 +173,111 @@ b. final method:
 c. final class:
    No classes can be inherited from the class declared as final. But that final class can extend other classes for its usage.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+26. When can you use super keyword?
+Ans. The super keyword is used to access hidden fields and overridden methods or attributes of the parent class.
+     Following are the cases when this keyword can be used:
+     Accessing data members of parent class when the member names of the class and its child subclasses are same.
+     To call the default and parameterized constructor of the parent class inside the child class.
+     Accessing the parent class methods when the child classes have overridden them.
+     The following example demonstrates all 3 cases when a super keyword is used.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+27. What is the main objective of garbage collection?
+Ans. The main objective of this process is to free up the memory space occupied by the unnecessary 
+     and unreachable objects during the Java program execution by deleting those unreachable objects.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+28. Using relevant properties highlight the differences between interfaces and abstract classes.
+Ans. Availability of methods: Only abstract methods are available in interfaces, whereas non-abstract methods can be present along with abstract methods in abstract classes.
+     Variable types: Static and final variables can only be declared in the case of interfaces, whereas abstract classes can also have non-static and non-final variables.
+     Inheritance: Multiple inheritances are facilitated by interfaces, whereas abstract classes do not promote multiple inheritances.
+     Data member accessibility: By default, the class data members of interfaces are of the public- type. Conversely,
+     the class members for an abstract class can be protected or private also.
+     Implementation: With the help of an abstract class, the implementation of an interface is easily possible. However, the converse is not true.-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+29. What happens if the static modifier is not included in the main method signature in Java?
+Ans. There wouldn't be any compilation error. But then the program is run, since the JVM cant map the main method signature,
+     the code throws “NoSuchMethodError” error at the runtime.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+30. Will the finally block get executed when the return statement is written at the end of try block and catch block as shown below?
+public int someMethod(int i){
+   try{
+       //some statement
+       return 1;
+   }catch(Exception e){
+       //some statement
+       return 999;
+   }finally{
+       //finally block statements
+     }
+  }
+  finally block will be executed irrespective of the exception or not.
+  The only case where finally block is not executed is when it encounters ‘System.exit()’ method anywhere in try/catch block.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+31. Although inheritance is a popular OOPs concept, it is less advantageous than composition. Explain.
+Ans. Inheritance lags behind composition in the following scenarios:
 
+    a] Multiple-inheritance is not possible in Java. Classes can only extend from one superclass.
+     In cases where multiple functionalities are required, for example - to read and write information into the file,
+     the pattern of composition is preferred. The writer, as well as reader functionalities, can be made use of by considering them as the private members.
+    b] Composition assists in attaining high flexibility and prevents breaking of encapsulation.
+    c] Unit testing is possible with composition and not inheritance. When a developer wants to test a class composing a different class,
+       then Mock Object can be created for signifying the composed class to facilitate testing. This technique is not possible with the help of inheritance
+       as the derived class cannot be tested without the help of the superclass in inheritance.
+    d] The loosely coupled nature of composition is preferable over the tightly coupled nature of inheritance.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+32. Why is synchronization necessary? Explain with the help of a relevant example.
+Ans. Concurrent execution of different processes is made possible by synchronization. When a particular resource is shared between many threads,
+     situations may arise in which multiple threads require the same shared resource.
 
+    Synchronization assists in resolving the issue and the resource is shared by a single thread at a time. Let’s take an example to understand it more clearly.
+   For example, you have a URL and you have to find out the number of requests made to it. Two simultaneous requests can make the count erratic.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+33. Can you explain the Java thread lifecycle?
+Ans. Java thread life cycle is as follows:
 
+    1. New – When the instance of the thread is created and the start() method has not been invoked, the thread is considered to be alive and hence in the NEW state.
+    2. Runnable – Once the start() method is invoked, before the run() method is called by JVM, the thread is said to be in RUNNABLE (ready to run) state. 
+       This state can also be entered from the Waiting or Sleeping state of the thread.
+    3. Running – When the run() method has been invoked and the thread starts its execution, the thread is said to be in a RUNNING state.
+    4. Non-Runnable (Blocked/Waiting) – When the thread is not able to run despite the fact of its aliveness, the thread is said to be in a NON-RUNNABLE state.
+       Ideally, after some time of its aliveness, the thread should go to a runnable state.
+        a] A thread is said to be in a Blocked state if it wants to enter synchronized code but it is unable to as another thread is 
+           operating in that synchronized block on the same object. The first thread has to wait until the other thread exits the synchronized block.
+        b] A thread is said to be in a Waiting state if it is waiting for the signal to execute from another thread, i.e it waits for work until the signal is received.
+    5. Terminated – Once the run() method execution is completed, the thread is said to enter the TERMINATED step and is considered to not be alive.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+34. What do you understand by marker interfaces in Java?
+Ans. Marker interfaces, also known as tagging interfaces are those interfaces that have no methods and constants defined in them.
+     They are there for helping the compiler and JVM to get run time-related information regarding the objects.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+35. List the features of Java Programming language.
+Ans. There are the following features in Java Programming Language.
 
+     a] Simple: Java is easy to learn. The syntax of Java is based on C++ which makes easier to write the program in it.
 
+     b] Object-Oriented: Java follows the object-oriented paradigm which allows us to maintain our code as the combination of different type of objects
+       that incorporates both data and behavior.
+
+     c] Portable: Java supports read-once-write-anywhere approach. We can execute the Java program on every machine. Java program (.java) is converted to bytecode (.class) 
+        which can be easily run on every machine.
+
+     d] Platform Independent: Java is a platform independent programming language. It is different from other programming languages like C and C++ which needs a platform to be executed.
+        Java comes with its platform on which its code is executed. Java doesn't depend upon the operating system to be executed.
+
+     e] Secured: Java is secured because it doesn't use explicit pointers. Java also provides the concept of ByteCode and Exception handling which makes it more secured.
+
+     f] Robust: Java is a strong programming language as it uses strong memory management. The concepts like Automatic garbage collection, Exception handling, etc. make it more robust.
+
+     g] Architecture Neutral: Java is architectural neutral as it is not dependent on the architecture. In C, the size of data types may vary according to the architecture (32 bit or 64 bit) which doesn't exist in Java.
+
+     h] Interpreted: Java uses the Just-in-time (JIT) interpreter along with the compiler for the program execution.
+
+     i] High Performance: Java is faster than other traditional interpreted programming languages because Java bytecode is "close" to native code. It is still a little bit slower than a compiled language (e.g., C++).
+
+     j] Multithreaded: We can write Java programs that deal with many tasks at once by defining multiple threads. The main advantage of multi-threading is that it doesn't occupy memory for each thread. 
+        It shares a common memory area. Threads are important for multi-media, Web applications, etc.
+
+     k] Distributed: Java is distributed because it facilitates users to create distributed applications in Java. RMI and EJB are used for creating distributed applications.
+        This feature of Java makes us able to access files by calling the methods from any machine on the internet.
+
+     l] Dynamic: Java is a dynamic language. It supports dynamic loading of classes. It means classes are loaded on demand. It also supports functions from its native languages, i.e., C and C++.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
