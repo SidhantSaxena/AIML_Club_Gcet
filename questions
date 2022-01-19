@@ -64,8 +64,50 @@ it gets executed before the actual C Program is executed.
 ans: In Call by value, a copy of the variable is passed whereas in Call by reference, a variable itself is passed.
      n Call by value, actual and formal arguments will be created in different memory locations whereas 
      In Call by reference, actual and formal arguments will be created in the same memory location.
-     
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+12.difference between the local variable and global variable in C?
+ans :Local variable   :	A variable which is declared inside function or block is known as a local variable.
+                       Variables can be accessed only by those statements inside a function in which they are declared.
+Global variable: A variable which is declared outside function or block is known as a global variable.
+	Any statement in the entire program can access variables.
+        
+------------------------------------------------------------------------------------------------------------------------------------------------------
+13. What is recursion in C?
+When a function calls itself, and this process is known as recursion. The function that calls itself is known as a recursive function.
+basic recursion exampple ?
 
+int factorial(int);  
+int main()  
+{  
+ int n=5,f;  
+ f=factorial;   
+ printf("factorial of a number is %d",f);  
+  return 0;  
+}  
+int factorial(int a)  
+{  
+  if(a==1)  
+  {  
+      return 1;  
+  }  
+  else  
+  return a*factorial(a-1);   
+   } 
+   ------------------------------------------------------------------------------------------------------------------------------------------------------------
+   14. What is dynamic memory allocation?
+In case of dynamic memory allocation, memory is allocated at runtime and memory can be increased while executing the program. It is used in the linked list.
+The malloc() or calloc() function is required to allocate the memory at the runtime.
+example syntax:int *p= malloc(sizeof(int)*10);
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+15.Can we compile a program without main() function?
+Yes, we can compile, but it can't be executed.
+But, if we use #define, we can compile and run a C program without using the main() function.
+ example:
+#include<stdio.h>    
+#define start main    
+void start() {    
+   printf("Hello");    
+}    
 
 
 
