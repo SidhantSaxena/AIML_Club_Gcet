@@ -108,6 +108,52 @@ But, if we use #define, we can compile and run a C program without using the mai
 void start() {    
    printf("Hello");    
 }    
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Why is Java a platform independent language?(JAVA)
+Ans. Java language was developed in such a way that it does not depend on any hardware or software due
+     to the fact that the compiler compiles the code and then converts it to platform-independent byte code which can be run on multiple systems.
+
+     The only condition to run that byte code is for the machine to have a runtime environment (JRE) installed in it.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. What do you understand by an instance variable and a local variable?(JAVA)
+Ans. Instance variables are those variables that are accessible by all the methods in the class.
+     They are declared outside the methods and inside the class. These variables describe the properties of an object and remain bound to it at any cost.
+
+     All the objects of the class will have their copy of the variables for utilization. If any modification is done on these variables, then only that 
+     instance will be impacted by it, and all other class instances continue to remain unaffected.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. What do you mean by data encapsulation?(JAVA)
+Ans. a) Data Encapsulation is an Object-Oriented Programming concept of hiding the data attributes and their behaviors in a single unit.
+     b) It helps developers to follow modularity while developing software by ensuring that each object is independent of other objects by having its
+       own methods, attributes, and functionalities.
+     c) It is used for the security of the private properties of an object and hence serves the purpose of data hiding.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4. Explain the concept of constructor overloading.(JAVA)
+Ans. Constructor overloading is the process of creating multiple constructors in the class consisting of the same name with a difference in the constructor parameters.
+     Depending upon the number of parameters and their corresponding types, distinguishing of the different types of constructors is done by the compiler.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5. Explain Method OverRiding.(JAVA)
+Ans. Method overriding is the concept in which two methods having the same method signature are present in two different classes in which an inheritance relationship is present.
+     A particular method implementation (already present in the base class) is possible for the derived class by using method overriding.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+6. Explain Method OverLoading.(JAVA)
+Ans. Method overloading is made possible by introducing different methods in the same class consisting of the same name. Still, all the functions differ in the number or type of parameters.
+     It takes place inside a class and enhances program readability.
+     The only difference in the return type of the method does not promote method overloading.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+7. Explain the use of final keyword in variable, method and class.(JAVA)
+Ans. In Java, the final keyword is used as defining something as constant /final and represents the non-access modifier.
+
+a. final variable:
+   When a variable is declared as final in Java, the value can’t be modified once it has been assigned.
+   If any value has not been assigned to that variable, then it can be assigned only by the constructor of the class.
+b. final method:
+   A method declared as final cannot be overridden by its children's classes.
+   A constructor cannot be marked as final because whenever a class is inherited, the constructors are not inherited. Hence, marking it final doesn't make sense.
+   Java throws compilation error saying - modifier final not allowed here
+c. final class:
+   No classes can be inherited from the class declared as final. But that final class can extend other classes for its usage.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
