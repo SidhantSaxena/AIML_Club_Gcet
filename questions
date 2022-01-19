@@ -60,3 +60,9 @@ Ans: The program will be compiled but will not be executed. To execute any C pro
 Ans: A Preprocessor Directive is considered as a built-in predefined function or macro that acts as a directive to the compiler and 
 it gets executed before the actual C Program is executed.
 -----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
